@@ -3,7 +3,9 @@ const express = require('express')
 const axios = require('axios').default;
 const app = express();
 
-app.get('/', async (req, res) => {
+app.use(express.static("public"))
+
+app.get('/api/v1/auth/', async (req, res) => {
 
   const code = req.query.code;
   const clientID = req.query.clientID;
@@ -22,4 +24,4 @@ app.get('/', async (req, res) => {
 });
 // Start the server on port 8080
 
-app.listen(process.port|8080)
+app.listen(process.env.PORT || 8080);
