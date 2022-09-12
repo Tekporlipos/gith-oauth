@@ -5,9 +5,8 @@ const axios = require('axios').default;
 const app = express();
 
 app.use(express.static("public"))
-
+app.use(cors());
 app.get('/api/v1/auth/', async (req, res) => {
-  app.use(cors());
   const code = req.query.code;
   const clientID = req.query.clientID;
   const clientSecret = req.query.clientSecret;
