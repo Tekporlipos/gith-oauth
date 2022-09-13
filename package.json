@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "lyrics-finder": "^21.7.0"
   }
 }
